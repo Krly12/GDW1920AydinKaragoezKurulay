@@ -1,0 +1,1 @@
+# GDW1920AydinKaragoezKurulay
