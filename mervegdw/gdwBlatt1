@@ -1,0 +1,95 @@
+console.log("");
+console.log("Aufgabe1:");
+console.log("Ich heisse Merve");  //Ausgabe auf der Konsole
+console.log("");
+
+
+console.log("Aufgabe2:");
+const max_sterne = 5;      //maximale Höhe einer Bewertung der App
+var akt_anzahl = 10;       //aktuelle Anzahl der Bewertung, also wie viele Personen bewertet haben
+var bewertung = 160;       //Bewertung selbst, Sterne addiert
+
+console.log("Bewertung:");                                      //Varibalen werden auf der Konsole ausgegeben
+console.log("Maximale Sterne: ",max_sterne);
+console.log("Aktuelle Anzahl der Bewertungen: ",akt_anzahl);
+console.log("erreichte Sterne", bewertung);
+console.log("");
+
+
+
+console.log("Aufgabe3");
+const readline = require('readline');
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
+
+rl.question("Bitte bewerten Sie die App: ",function(answer) {
+	if ( answer > max_sterne || answer < 0) {                                               // max_Sterne beachten man darf nur zwischen 1 und 5 Sterne abgeben
+		console.log("Achtung mindestens 1 und maximal 5 Sterne geben !");
+	}
+	else if(isNaN(answer) == true) {                                                        // die isNaN() Methode prüft ob ein Wert NaN ist, heißt es prüft ob answer ein non-Integer ist.
+		console.log("Achtung Ihre Eingabe ist keine Zahl!");                            // Rückgabewert ist true wenn der gegebene Wert NaN ist, sonst false
+	}
+	else {
+		console.log(answer);    //Hier wird die eingegebene answer ausgegeben
+	}
+	rl.close()  // Prozess wird beendet
+});
+
+
+
+/*
+console.log("");
+console.log("Aufgabe4:");
+var min = 1, max = 5;
+
+function rand (min,max) {                                                                      // Bewertung wird zufällig gewählt und nicht über Benutzereingabe
+	return n = Math.floor(Math.random() * (max - min +1)) + min;                           // Es wird eine ganze Zufallszahl zwischen zwei Zahlen, in diesem Fall zwischen 1 und 5 erzeugt
+}
+console.log("Eine zufällige Bewertung:",rand(min,max));
+*/
+
+
+
+
+/*
+var fak = 1;                                                                                   //Die Bewertung wird mit hilfe von der Fakultätsfunktion n-mal berechnet
+
+for (i=1; 1<=n; i++) {
+	fak = fak *i;
+break;
+}
+
+
+console.log("");
+console.log ("Aktuelle Anzahl der Bewertungen: ",akt_anzahl+1);
+console.log("Die erreichten Sterne: ",bewertung+n);
+console.log("Die berechnete Bewertung: ", fak);
+*/
+
+
+
+
+
+/*
+console.log("");
+console.log("Aufgabe5");
+function berechnung (n) {                                                                     // Die Berechnung der Bewertung wird hier in eine Funktion gepackt
+
+var fak = 1;
+for (i=1; i<=n; i++) {
+	fak = fak*i;
+}
+return fak;
+}
+
+console.log("Aktuelle Anzahl der Bewertung: ",akt_anzahl+1);
+console.log("Die erreichten Sterne: ",bewertung+n);
+console.log("Ergebnis: ", berechnung(n));
+
+	
+*/
+
+
+
