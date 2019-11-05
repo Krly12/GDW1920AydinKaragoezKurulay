@@ -1,0 +1,103 @@
+console.log("Aufgabe2:");
+const max_sterne = 5;                                                       //maximale Höhe einer Bewertung der App
+var akt_anzahl = 10;                                                        //aktuelle Anzahl der Bewertung,gibt an wie viele Personen eine Bewertung abgegeben haben
+var ergebnis = 160;                                                         //Bewertung selbst, sterne
+
+console.log("Bewertung:");                                                  //Variablen werden auf der Konsole ausgegeben
+console.log("Maximale Sterne: ",max_sterne);
+console.log("Aktuelle Anzahl der Bewertungen: ",akt_anzahl);
+console.log("Erreichte Sterne", ergebnis);
+console.log("");
+
+
+
+
+
+
+console.log("Aufgabe3");
+const readline = require('readline');
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
+
+rl.question("Bitte bewerten Sie die App: ",function(answer) {
+
+
+	if ( answer > max_sterne || answer < 0) {    // const beachten!
+		console.log("Achtung mindestens 1 maximal 5 Sterne geben !");
+	}
+	else if(isNaN(answer) == true) {         //prüfen ob answer ein non-Integer ist
+		console.log("Achtung Ihre Eingabe ist keine Zahl!");
+	}
+	else {
+		console.log(answer);    //Hier wird die eingegebene answer ausgegeben
+	}
+
+
+	rl.close();                                                           // Prozess wird beendet
+
+
+
+
+
+
+
+//Blatt2A1-Array
+
+let array = ['bewertungApp',akt_anzahl,answer];                               // Array angelegt mit Name der Bewertung,Anzahl der abgegebenen Bewertungen und zuletzt eingetragene Bewertung
+console.log("");
+console.log("Länge des Arrays:", array.length);                               // gibt die Länge des Arrays aus
+console.log("Zuletzt eingetragene Bewertung: ",array[array.length-1]);        // gibt letzte Bewertung aus
+
+
+
+// Blatt2A2-Object&A3-this
+
+let ratings = new Object();                                                   // Objekt ratings wird erstellt mit den Eigenschaften name, anzahl, letztes und durchschnitt
+ratings.name = "bewertungApp";
+ratings.anzahl = akt_anzahl;
+ratings.letztes = ergebnis;
+ratings.durchschnitt = function() {                                           // Berechnung des Durchschnitts der Bewertungen wird in Funktion gepackt,
+	return this.letztes/this.anzahl;
+}
+
+console.log("Name der Bewertung: ",ratings.name);
+console.log("Durchschnitt: ",ratings.durchschnitt());
+
+
+
+//Blatt2A4-arrow function
+
+console.log("");
+
+const arrow = () => (ergebnis/akt_anzahl);                                    // arrow function = kürzere Schreibweise für normale function 
+console.log("Arrow", arrow());
+
+
+
+//Blatt2A5-scope
+
+console.log("");
+const hello = "hello";
+
+function scope1 () {                                   
+	const world = "World";         
+	let name1 = world.concat(hello);                                     // Methode String.concat(): world mit hello konkateniert = Worldhello
+
+console.log("Konkatenieren: " ,name1);
+}
+
+scope1();
+
+function scope2 () {
+	const world = "World";
+	let name2 = hello.concat(world);                                     // hier in richtiger Reigenfolge: hello mit world konkateniert = helloWorld
+
+console.log("Konkatenieren: ",name2);
+}
+scope2();
+
+});
+
+
