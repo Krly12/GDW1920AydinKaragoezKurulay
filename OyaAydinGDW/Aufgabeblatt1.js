@@ -1,6 +1,7 @@
 //Grundlagen des Web
 //Aufgabe 1
-console.log("---I---");
+console.log("");
+console.log("\t---I---");
 console.log("");
 console.log("Mein Name ist: Oya Aydin"); //Ausgabe meines Namens auf der Konsole 
 console.log("");
@@ -8,8 +9,9 @@ console.log("");
 
 
 //Aufgabe 2
-
-console.log("---II---");
+console.log("");
+console.log("\t---II---");
+console.log("");
 //Diese Kosntante steht für die maximale Höhe der möglichen Bewertung 
 
 const max_höhe= 5;
@@ -61,7 +63,9 @@ console.log("");
 
 
 console.log("");
-console.log("---III---");
+console.log("\t---III---");
+console.log("");
+
 console.log("\tBitte geben Sie ihre Bewertung ab:");
 console.log("Sie können 1 bis 5 Sterne vergeben!");
 function prompt(question,callback) {
@@ -95,8 +99,9 @@ console.log("");
 
 //Aufgabe 4
 // Fakultät
-
-console.log("---IV---");
+console.log("");
+console.log("\t---IV---");
+console.log("");
 var n;
 
 function random(max_höhe) {
@@ -123,8 +128,8 @@ console.log("Die gesamt Bewertungen",aktuelle_bewertung + n);
 console.log("Die berechnete Bewertung:",fak);
 */
 console.log("");
-console.log("---V---");
-
+console.log("^\t---V---");
+console.log("");
 var fak = 1;
 function berechnung(n) {
 
@@ -138,4 +143,4 @@ console.log("Die aktuelle Bewertungen:",aktuelle_anzahl + 1);
 console.log("Die gesamt Bewertungen:", aktuelle_bewertung + n);
 console.log("Die berechnete Bewertung:", berechnung(n));
 
-
+process.exit(1)
