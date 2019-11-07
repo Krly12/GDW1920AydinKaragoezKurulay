@@ -77,7 +77,7 @@ function zufall(maxHoehe){
 
 var fak = 0;
 
-for(i=0; i<=n; i++) {
+for(i=0; i<=n; i++) { // da n-mal berechnen
 	fak = fak*i;
 //break;
 }
@@ -85,7 +85,7 @@ for(i=0; i<=n; i++) {
 
 console.log("Die zufällige Bewertung ist : " + zufall(maxHoehe));
 console.log("Die Anzahl der Bewertungen ist: " + (aktuelleAnz + 1))
-console.log("Die aktuelle Bewertung ist: " + (Bewertung + n));
+console.log("Die aktuelle Bewertung ist: " + (Bewertung + n)); 
 
 console.log()
 
