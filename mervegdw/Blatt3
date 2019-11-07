@@ -1,0 +1,58 @@
+console.log("Aufgabe1");
+
+const stadt [
+		{
+			"stadt":"berlin",
+			"bundesl":"berlin"
+		},
+		{
+			"stadt:"hamburg",
+			"bundesl":"hamburg"
+		},
+		{
+			"stadt":"münchen",
+			"bundesl":"bayern"
+		},
+		{
+			"stadt":"köln",
+			"bundesl":"NRW"
+		},
+		{
+			"stadt":"stuttgart",
+			"bundesl":"badem-württemberg"
+		},
+		{
+			"stadt":"düsseldorf","bundesl":NRW
+		},
+		{
+			"stadt":leipzig,"bundesl":"sachsen"
+		},
+		{
+			"stadt":dortmund,"bundesl:"NRW"
+		},
+		{
+			"stadt":"essen","bundesl":"NRW"
+		},
+		{
+			"stadt":"bremen","bundesl":"bremen"
+		}
+];
+
+
+let json = JSON.stringify(stadt);   //stadt ist jetzt ein json string
+
+
+
+
+// A3
+
+try {
+	var checkedjson = JSON.parse(json)
+} catch(e) {
+	if (e instanceof SyntaxError) {             // oder nur console.log(e);
+		printError (e, true);
+	} else {
+		printError(e,false);
+	}
+}
+
